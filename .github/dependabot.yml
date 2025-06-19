@@ -1,0 +1,26 @@
+version: 2
+updates:
+  - package-ecosystem: gomod
+    directory: /_examples/envoy
+    schedule:
+      interval: daily
+
+  - package-ecosystem: gomod
+    directory: /_examples/k8s
+    schedule:
+      interval: daily
+
+  - package-ecosystem: gomod
+    directory: /_examples/repl
+    schedule:
+      interval: daily
+
+  - package-ecosystem: gomod
+    directory: /_examples/wasm
+    schedule:
+      interval: daily
+
+  - package-ecosystem: gomod
+    directory: /
+    schedule:
+      interval: daily

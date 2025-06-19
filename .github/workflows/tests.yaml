@@ -1,6 +1,9 @@
 name: "Tests"
 on: ["push", "pull_request"]
 
+permissions:
+  contents: read
+
 jobs:
   tests:
     name: "Go ${{ matrix.go.series }}"
@@ -21,10 +24,10 @@ jobs:
             version: "1.24.2"
 
     steps:
-      - uses: "actions/checkout@v4"
+      - uses: "actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2"
         with:
           path: "src"
-      - uses: "actions/cache@v4"
+      - uses: "actions/cache@5a3ec84eff668545956fd18022155c47e93e2684 # v4.2.3"
         with:
           path: cache
           key: "go=${{ matrix.go.version }};v=1"
